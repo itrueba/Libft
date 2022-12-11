@@ -33,17 +33,17 @@ static int	ft_count_size(char const *s, char c)
 	return (count);
 }
 
-static int	ft_size_word(char const *s, char c, int i)
+static int	ft_size_word(char const *s, char c, int start)
 {
-	int	size;
+	int	end;
 
-	size = 0;
-	while (s[i] != c && s[i])
+	end = 0;
+	while (s[start] != c && s[start])
 	{
-		size++;
-		i++;
+		end++;
+		start++;
 	}
-	return (size);
+	return (end);
 }
 
 static char	**ft_free(char **split, size_t word)
@@ -59,24 +59,24 @@ static char	**ft_split(char const *s, char c)
 	char	**split;
 	size_t	n_word;
 	size_t	word;
-	int		x;
-	int		size;
+	int		start;
+	int		end;
 
-	word = -1;
-	x = 0;
-	n_word = ft_count_size(s, c);
+	n_word = ft_count_size(s, c);	
 	split = (char **)malloc((n_word + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
+	word = -1;
+	start = 0;
 	while (++word < n_word)
 	{
-		while (s[x] == c)
-			x++;
-		size = ft_size_word(s, c, x);
-		split[word] = ft_substr(s, x, size);
+		while (s[start] == c)
+			start++;
+		end = ft_size_word(s, c, start);
+		split[word] = ft_substr(s, start, end);
 		if (!split[word])
 			return (ft_free(split, word));
-		x += size;
+		start += end;
 	}
 	split[word] = 0;
 	return (split);
