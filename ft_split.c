@@ -54,7 +54,7 @@ static char	**ft_free(char **split, size_t word)
 	return (NULL);
 }
 
-static char	**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**split;
 	size_t	n_word;
