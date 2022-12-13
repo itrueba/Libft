@@ -6,7 +6,7 @@
 /*   By: itrueba- <itrueba-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 09:22:57 by itrueba-          #+#    #+#             */
-/*   Updated: 2022/12/13 11:14:22 by itrueba-         ###   ########.fr       */
+/*   Updated: 2022/12/13 15:05:36 by itrueba-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	**ft_split(char const *s, char c)
 		split[word] = ft_substr(s, start, end);
 		if (!split[word])
 			return (ft_free(split, word));
-		start += end;
+		start = start + end;
 	}
 	split[word] = 0;
 	return (split);

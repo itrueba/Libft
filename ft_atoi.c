@@ -6,7 +6,7 @@
 /*   By: itrueba- <itrueba-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 09:22:15 by itrueba-          #+#    #+#             */
-/*   Updated: 2022/12/03 10:45:00 by itrueba-         ###   ########.fr       */
+/*   Updated: 2022/12/13 14:43:30 by itrueba-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_atoi(const char *nptr)
 		if (*nptr == '-')
 			sign = -1;
 		++nptr;
-		if (!ft_isdigit(*(nptr)))
+		if (!ft_isdigit(*nptr))
 			return (0);
 	}
 	while (*nptr && ft_isdigit(*nptr))

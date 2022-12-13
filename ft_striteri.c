@@ -6,11 +6,9 @@
 /*   By: itrueba- <itrueba-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 11:06:04 by itrueba-          #+#    #+#             */
-/*   Updated: 2022/12/07 11:06:05 by itrueba-         ###   ########.fr       */
+/*   Updated: 2022/12/13 15:18:49 by itrueba-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

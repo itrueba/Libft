@@ -6,7 +6,7 @@
 /*   By: itrueba- <itrueba-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 15:15:57 by itrueba-          #+#    #+#             */
-/*   Updated: 2022/12/03 12:25:48 by itrueba-         ###   ########.fr       */
+/*   Updated: 2022/12/13 15:02:41 by itrueba-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	p_src = (char *)src;
 	p_dst = (char *)dst;
-	x = 0;
+	x = -1;
 	if (!src && !dst)
 		return (NULL);
 	if (p_src < p_dst)
@@ -30,11 +30,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		while (x < len)
-		{
+		while (++x < len)
 			p_dst[x] = p_src[x];
-			x++;
-		}
 	}
 	return (dst);
 }
