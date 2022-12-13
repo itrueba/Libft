@@ -6,13 +6,13 @@
 /*   By: itrueba- <itrueba-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 11:04:15 by itrueba-          #+#    #+#             */
-/*   Updated: 2022/12/13 14:49:43 by itrueba-         ###   ########.fr       */
+/*   Updated: 2022/12/13 17:55:01 by itrueba-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	nb_len(long nb)
+static int	nb_len(long nb)
 {
 	int	len;
 
@@ -30,7 +30,7 @@ int	nb_len(long nb)
 	return (len);
 }
 
-char	*ft_alocate(long number, int len, char *str)
+static char	*ft_alocate(long number, int len, char *str)
 {
 	while (number > 0)
 	{

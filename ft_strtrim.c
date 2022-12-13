@@ -6,13 +6,13 @@
 /*   By: itrueba- <itrueba-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 09:22:57 by itrueba-          #+#    #+#             */
-/*   Updated: 2022/12/08 13:10:27 by itrueba-         ###   ########.fr       */
+/*   Updated: 2022/12/13 17:54:09 by itrueba-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_compare(char c, char const *set)
+static int	ft_compare(char c, char const *set)
 {
 	while (*set)
 	{
