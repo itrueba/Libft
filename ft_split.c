@@ -6,7 +6,7 @@
 /*   By: itrueba- <itrueba-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 09:22:57 by itrueba-          #+#    #+#             */
-/*   Updated: 2022/12/08 16:06:57 by itrueba-         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:14:22 by itrueba-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char	**ft_split(char const *s, char c)
 	int		start;
 	int		end;
 
-	n_word = ft_count_size(s, c);	
+	n_word = ft_count_size(s, c);
 	split = (char **)malloc((n_word + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
