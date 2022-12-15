@@ -21,20 +21,23 @@ BONUS			= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 
 BONUS_OBJS		= $(BONUS:.c=.o)
 
-all:			$(NAME)
+all:	$(NAME)
 
-$(NAME):		$(OBJS)
-				$(AR) $(NAME) $(OBJS)
+%.o: %.c
+		$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
+			$(AR) $@ $^
 
 clean:
-				$(RM) $(OBJS) $(BONUS_OBJS)
+		$(RM) $(OBJS) $(BONUS_OBJS)
 
-fclean:			clean
-				$(RM) $(NAME)
+fclean:	clean
+		$(RM) $(NAME)
 
-re:				fclean $(NAME)
+re:		fclean $(NAME)
 
-bonus:		$(BONUS_OBJS)
-				$(AR) $(NAME) $(BONUS_OBJS)
+bonus:	$(BONUS_OBJS)
+		$(AR) $(NAME) $^
 
-.PHONY:			all clean fclean re bonus
+.PHONY:	all clean fclean re bonus
